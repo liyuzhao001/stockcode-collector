@@ -5,6 +5,10 @@
         INSERT INTO stock(stock_code,stock_name,stock_exchange,create_time,update_time) VALUE (#{stock_code},#{stock_name},#{stock_exchange},now(),now())
     </insert>
 
+    <update id="update" parameterType="Stock_Table">
+        UPDATE stock SET stock_code=#{stock_code}, stock_name=#{stock_name}, stock_exchange=#{stock_exchange}, stock_status=#{stock_status}, update_time=now() WHERE id=#{id}
+    </update>
+
     <select id="selectStockByStockCode" parameterType="int" resultType="Stock_Table">
         SELECT * FROM stock WHERE stock_code=#{stock_code}
     </select>

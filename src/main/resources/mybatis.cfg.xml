@@ -6,7 +6,6 @@
     <properties resource="jdbc.properties"/>
 
     <typeAliases>
-        <!--<typeAlias alias="Stock_Table" type="tech.jibudao.stock.stockcode_collector.tables"/>-->
         <package name="tech.jibudao.stock.stockcode_collector.tables"/>
     </typeAliases>
 
